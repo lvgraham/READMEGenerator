@@ -14,11 +14,11 @@ const questions = [
         message: "Enter a description.",
         name: "description"
     },
-    // {
-    //     type: "input",
-    //     message: "Write a table of contents (separated by commas)",
-    //     name: "tableOfContents"
-    // },
+    {
+        type: "input",
+        message: "Write a table of contents (separated by commas)",
+        name: "tableOfContents"
+    },
     // {
     //     type: "input",
     //     message: "What are the installation guidelines",
@@ -83,12 +83,12 @@ inquirer
             console.log('Success!');
         });
 
-        // fs.appendFileSync(filename, '#' + response.title + '\n', function(err){
-        //     if (err) {
-        //         return console.log(err);
-        //     }
-        //     console.log('Success!');
-        // });
+        fs.appendFileSync(filename, '## Table of Contents: \n' + '-' response.tableOfContents.split(', ').join('\n -') + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
 
         // fs.appendFileSync(filename, '#' + response.title + '\n', function(err){
         //     if (err) {
