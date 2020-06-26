@@ -19,11 +19,11 @@ const questions = [
         message: "Write a table of contents (separated by commas)",
         name: "tableOfContents"
     },
-    // {
-    //     type: "input",
-    //     message: "What are the installation guidelines",
-    //     name: "install"
-    // },
+    {
+        type: "input",
+        message: "What are the installation guidelines",
+        name: "install"
+    },
     // {
     //     type: "input",
     //     message: "What is your application used for?",
@@ -83,19 +83,19 @@ inquirer
             console.log('Success!');
         });
 
-        fs.appendFileSync(filename, '## Table of Contents: \n' + '-' response.tableOfContents.split(', ').join('\n -') + '\n', function(err){
+        fs.appendFileSync(filename, ('## Table of Contents:' + '\n' + ' - ' + response.tableOfContents.split(', ').join('\n' + ' - ')) + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
             console.log('Success!');
         });
 
-        // fs.appendFileSync(filename, '#' + response.title + '\n', function(err){
-        //     if (err) {
-        //         return console.log(err);
-        //     }
-        //     console.log('Success!');
-        // });
+        fs.appendFileSync(filename, '## Installation \n' + response.install + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
 
         // fs.appendFileSync(filename, '#' + response.title + '\n', function(err){
         //     if (err) {
