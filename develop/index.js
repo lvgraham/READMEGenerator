@@ -1,3 +1,5 @@
+const inquirer = require('inquirer');
+
 // array of questions for user
 const questions = [
     {
@@ -28,7 +30,7 @@ const questions = [
     {
         type: "checkbox",
         message: "Select a license",
-        name: "license"
+        name: "license",
         choices: [
             'Apache License 2.0', 
             'GNU General Public License v3.0', 
@@ -59,14 +61,25 @@ const questions = [
 
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+inquirer 
+    .prompt(questions).then(response => {
 
-// function to initialize program
-function init() {
+        const filename = data.name.toLowerCase().split(' ').join('') + '.json';
+        // function to write README file
+        function writeToFile(fileName, data) {
+            
+        }
 
-}
+        // function to initialize program
+        function init() {
+
+        }
+    
+
+
+
+
+    })
 
 // function call to initialize program
 init();
