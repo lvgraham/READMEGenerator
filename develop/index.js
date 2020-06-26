@@ -24,27 +24,27 @@ const questions = [
         message: "What are the installation guidelines",
         name: "install"
     },
-    // {
-    //     type: "input",
-    //     message: "What is your application used for?",
-    //     name: "usage"
-    // },
-    // {
-    //     type: "checkbox",
-    //     message: "Select a license",
-    //     name: "license",
-    //     choices: [
-    //         'Apache License 2.0', 
-    //         'GNU General Public License v3.0', 
-    //         'MIT license', 
-    //         'Mozzila Public License 2.0',
-    //     ]
-    // },
-    // {
-    //     type: "input",
-    //     message: "Who is(are) the author(s)?",
-    //     name: "author"
-    // },
+    {
+        type: "input",
+        message: "What is your application used for?",
+        name: "usage"
+    },
+    {
+        type: "checkbox",
+        message: "Select a license",
+        name: "license",
+        choices: [
+            'Apache License 2.0', 
+            'GNU General Public License v3.0', 
+            'MIT license', 
+            'Mozzila Public License 2.0',
+        ]
+    },
+    {
+        type: "input",
+        message: "Who is(are) the author(s)?",
+        name: "author"
+    },
     // {
     //     type: "input",
     //     message: "What are the rules for contributing?",
@@ -83,6 +83,7 @@ inquirer
             console.log('Success!');
         });
 
+        //table of contents
         fs.appendFileSync(filename, ('## Table of Contents:' + '\n' + ' - ' + response.tableOfContents.split(', ').join('\n' + ' - ')) + '\n', function(err){
             if (err) {
                 return console.log(err);
@@ -90,6 +91,7 @@ inquirer
             console.log('Success!');
         });
 
+        //installation guide
         fs.appendFileSync(filename, '## Installation \n' + response.install + '\n', function(err){
             if (err) {
                 return console.log(err);
@@ -97,7 +99,36 @@ inquirer
             console.log('Success!');
         });
 
-        // fs.appendFileSync(filename, '#' + response.title + '\n', function(err){
+        //use-case
+        fs.appendFileSync(filename, '## Use Case \n' + response.usage + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
+
+        //license
+        fs.appendFileSync(filename, '## License \n' + response.license + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
+
+        //authors & contributors
+        fs.appendFileSync(filename, '## Authors & Contributors \n' + response.author + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
+        // fs.appendFileSync(filename, '## Use Case \n' + response.usage + '\n', function(err){
+        //     if (err) {
+        //         return console.log(err);
+        //     }
+        //     console.log('Success!');
+        // });
+        // fs.appendFileSync(filename, '## Use Case \n' + response.usage + '\n', function(err){
         //     if (err) {
         //         return console.log(err);
         //     }
