@@ -45,21 +45,21 @@ const questions = [
         message: "Who is(are) the author(s)?",
         name: "author"
     },
-    // {
-    //     type: "input",
-    //     message: "What are the rules for contributing?",
-    //     name: "contribute"
-    // },
-    // {
-    //     type: "input",
-    //     message: "Tests",
-    //     name: "test"
-    // },
-    // {
-    //     type: "input",
-    //     message: "enter contact information for any questions. ",
-    //     name: "questions"
-    // }
+    {
+        type: "input",
+        message: "What are the rules for contributing?",
+        name: "contribute"
+    },
+    {
+        type: "input",
+        message: "Tests",
+        name: "test"
+    },
+    {
+        type: "input",
+        message: "enter contact information for any questions. ",
+        name: "questions"
+    }
 
 ];
 
@@ -122,18 +122,30 @@ inquirer
             }
             console.log('Success!');
         });
-        // fs.appendFileSync(filename, '## Use Case \n' + response.usage + '\n', function(err){
-        //     if (err) {
-        //         return console.log(err);
-        //     }
-        //     console.log('Success!');
-        // });
-        // fs.appendFileSync(filename, '## Use Case \n' + response.usage + '\n', function(err){
-        //     if (err) {
-        //         return console.log(err);
-        //     }
-        //     console.log('Success!');
-        // });
+
+        //contribution
+        fs.appendFileSync(filename, '## Contribution rules \n' + response.contribute + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
+
+        //tests
+        fs.appendFileSync(filename, '## Tests \n' + response.test + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
+
+        //questions
+        fs.appendFileSync(filename, '## Questions \n' + response.questions + '\n', function(err){
+            if (err) {
+                return console.log(err);
+            }
+            console.log('Success!');
+        });
 
         // // function to initialize program
         // function init() {
