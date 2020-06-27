@@ -76,7 +76,7 @@ inquirer
         });
 
         //function to add description to README.md 
-        fs.appendFileSync(filename, '## Description \n' + response.description + '\n', function(err){
+        fs.appendFileSync(filename, '## Description' + '\n' + response.description + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -92,7 +92,7 @@ inquirer
         });
 
         //installation guide
-        fs.appendFileSync(filename, '## Installation \n' + response.install + '\n', function(err){
+        fs.appendFileSync(filename, '## Installation' + '\n' + response.install + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -100,7 +100,7 @@ inquirer
         });
 
         //use-case
-        fs.appendFileSync(filename, '## Use Case \n' + response.usage + '\n', function(err){
+        fs.appendFileSync(filename, '## Use Case' + '\n' + response.usage + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -108,7 +108,7 @@ inquirer
         });
 
         //license
-        fs.appendFileSync(filename, '## License \n' + response.license + '\n', function(err){
+        fs.appendFileSync(filename, '## License' + '\n' + response.license + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -116,7 +116,7 @@ inquirer
         });
 
         //authors & contributors
-        fs.appendFileSync(filename, '## Authors & Contributors \n' + response.author + '\n', function(err){
+        fs.appendFileSync(filename, '## Authors & Contributors' + '\n' + response.author + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -124,7 +124,7 @@ inquirer
         });
 
         //contribution
-        fs.appendFileSync(filename, '## Contribution rules \n' + response.contribute + '\n', function(err){
+        fs.appendFileSync(filename, '## Contribution rules' + '\n' + response.contribute + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -132,7 +132,7 @@ inquirer
         });
 
         //tests
-        fs.appendFileSync(filename, '## Tests \n' + response.test + '\n', function(err){
+        fs.appendFileSync(filename, '## Tests' + '\n' + response.test + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
@@ -140,7 +140,7 @@ inquirer
         });
 
         //questions
-        fs.appendFileSync(filename, '## Questions \n' + response.questions + '\n', function(err){
+        fs.appendFileSync(filename, '## Questions' + '\n' + response.questions + '\n', function(err){
             if (err) {
                 return console.log(err);
             }
