@@ -60,7 +60,17 @@ const questions = [
     },
     {
         type: "input",
-        message: "enter contact information for any questions. ",
+        message: "enter github user name",
+        name: "githubUserName"
+    },
+    {
+        type: "input",
+        message: "enter contact e-mail address.",
+        name: "email"
+    },
+    {
+        type: "input",
+        message: "Enter instructions on how to reach you for any questions",
         name: "questions"
     }
 
