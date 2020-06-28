@@ -78,10 +78,10 @@ const questions = [
 
 
 // function call to initialize program
-async function init() {
+function init() {
     
     try{
-        await inquirer.prompt(questions).then(data => {
+        inquirer.prompt(questions).then(data => {
             const filename = 'README.md'
             fs.writeFile(filename, generateMarkdown(data), err => {
                 if (err) {
