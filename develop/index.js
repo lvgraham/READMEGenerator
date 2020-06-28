@@ -16,12 +16,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Write a table of contents (separated by commas)",
-        name: "tableOfContents"
-    },
-    {
-        type: "input",
-        message: "What are the installation guidelines",
+        message: "What are the installation guidelines?",
         name: "install"
     },
     {
@@ -37,7 +32,16 @@ const questions = [
             'Apache License 2.0', 
             'GNU General Public License v3.0', 
             'MIT license', 
+            'BSD 2-Clause "Simplified" License', 
+            'BSD 3-Clause "Simplified" License', 
+            'Boost Software License 1.0', 
+            'Creative Commons Zero v1.0 Universal', 
+            'Eclipse Public License 2.0', 
+            'GNU Affero General Public License v3.0', 
+            'GNU General Public License v2.0', 
+            'GNU Lesser General Public License v2.1', 
             'Mozzila Public License 2.0',
+            'The Unilicense',
         ]
     },
     {
@@ -62,6 +66,8 @@ const questions = [
     }
 
 ];
+
+
 
 
 // function call to initialize program
