@@ -31,8 +31,6 @@ function generateMarkdown(data) {
 
   ${data.license}
 
-  ## Badges
-
   ## Authors
 
   ${data.author}

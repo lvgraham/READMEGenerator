@@ -33,7 +33,6 @@ const questions = [
             'GNU General Public License v3.0', 
             'MIT license', 
             'BSD 2-Clause "Simplified" License', 
-            'BSD 3-Clause "Simplified" License', 
             'Boost Software License 1.0', 
             'Creative Commons Zero v1.0 Universal', 
             'Eclipse Public License 2.0', 
@@ -68,13 +67,11 @@ const questions = [
 ];
 
 
-
-
 // function call to initialize program
-function init() {
-
+async function init() {
+    
     try{
-        inquirer.prompt(questions).then(data => {
+        await inquirer.prompt(questions).then(data => {
             const filename = 'README.md'
             fs.writeFile(filename, generateMarkdown(data), err => {
                 if (err) {
@@ -83,7 +80,9 @@ function init() {
                     console.log('Success! You now have an awesome README')
                 }
             });
+
         });
+
     }
     catch(error){
         console.log(error);
