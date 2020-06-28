@@ -1,10 +1,10 @@
 
   
-  # Readme Generator
+  # README Generator
   
   ## Description 
   
-  This project will allow you to create an awesome Readme quickly!
+  This application will allow you to create an awesome, detailed README quickly.
   
   ## Table of Contents
 
@@ -19,11 +19,11 @@
   
   ## Installation
 
-  run node index.js to get started
+  clone this repository and run node index.js
 
   ## Usage
 
-  This will allow the user to create an awesome, professional, and informative Readme to make their project shine
+  to create professional README files to allow your projects to shine
 
   ## License
 
@@ -35,7 +35,7 @@
 
   ## Contributing
 
-  Contact me via email
+  please contact me via email for any suggestions 
 
   ## Tests
 
@@ -43,7 +43,7 @@
 
   ## Questions
   
-  please email me with any questions about this project. 
+  please contact me for any questions in regard to this application.
 
   email address: liavibanez@gmail.com
 
