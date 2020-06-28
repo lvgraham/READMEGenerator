@@ -31,8 +31,8 @@ THEN I am taken to the corresponding section of the README
 
 ```
 
-##images of application
+##Images of Application
 
 ![Screenshot of terminal](develop/images/TerminalSC.png)
 
-![Deployed README]()
+![Deployed README](develop/images/DeployedSC.png)
